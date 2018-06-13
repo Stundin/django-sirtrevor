@@ -3,11 +3,8 @@ try:  # pre 1.6
 except ImportError:
     from django.conf.urls import url
 
+from .views import attachment
 
 urlpatterns = [
-    url(
-        '^attachments/',
-        'sirtrevor.views.attachment',
-        name='sirtrevor_attachments',
-    ),
+    url('^attachments/', attachment, name='sirtrevor_attachments'),
 ]
